@@ -16,7 +16,7 @@
         <nav class="navbar">
             
             <div class="logo">
-                <img src="img/logo/Group 72.png" alt="Naltlan Dealer Logo">
+                <img src="assets/img/logo/Group 72.png" alt="Naltlan Dealer Logo">
             </div>
             <ul class="nav-links">
                 <li class="active"><a href="#">Home</a></li>
@@ -51,7 +51,7 @@
 
 
     <div class="container">
-        <img src="assets\img\featured\steer.png" alt="Steering Wheel Icon">
+        <img src="assets/img/featured/steer.png" alt="Steering Wheel Icon">
         <div class="box">
             <h3>Where Does Beauty Come From?</h3>
             <p>This question has occupied the thoughts of philosophers, artists and scientists since the dawn of time. An enigma that continuously engages our thoughts as well.</p>
