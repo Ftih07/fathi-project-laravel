@@ -20,7 +20,7 @@ ul {
 
 /* Navbar Styles */
 header {
-    background-image: url('img/background/Group\ 287.png');
+    background-image: url('img/background/Group 287.png');
     background-size: cover; /* Untuk memastikan gambar menutupi seluruh area */
     background-repeat: no-repeat; /* Untuk mencegah pengulangan gambar */
     width: 100%;
@@ -257,6 +257,8 @@ header::after {
     opacity: 0; /* Menghilangkan bayangan saat di-hover */
     transition: 1s;
 }
+
+/*yasudah*/
 
 .text-overlay {
     position: absolute;

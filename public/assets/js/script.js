@@ -1,14 +1,3 @@
-const wrapper = document.querySelector(".wrapper");
-const registerLink = document.querySelector(".register-link");
-const loginLink = document.querySelector(".login-link");
-
-registerLink.onclick = () => {
-    wrapper.classList.add("active");
-};
-
-loginLink.onclick = () => {
-    wrapper.classList.remove("active");
-};
 
 // Login Form
 document
@@ -24,7 +13,7 @@ document
 
         if (username == correctUsername && password == correctPassword) {
             alert("Login Berhasil");
-            window.location.href = "/index";
+            window.location.href = "index";
         } else {
             alert("Username atau password salah");
         }
