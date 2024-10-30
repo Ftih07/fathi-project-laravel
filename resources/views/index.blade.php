@@ -24,7 +24,7 @@
         </a>
     </li>
     <li class="inline-block mr-2 relative">
-        <a href="#" class="relative group">
+        <a href="{{ route ('about') }}" class="relative group">
             About us
             <span class="absolute left-0 right-0 bottom-0 top-9 h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
         </a>
