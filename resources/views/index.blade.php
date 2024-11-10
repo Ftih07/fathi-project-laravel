@@ -30,7 +30,7 @@
         </a>
     </li>
     <li class="inline-block mr-2 relative">
-        <a href="#" class="relative group">
+        <a href="{{ route ('car') }}" class="relative group">
             Supercar
             <span class="absolute left-0 right-0 bottom-0 top-9 h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
         </a>
@@ -313,7 +313,7 @@
     <img src="assets/img/footer/PayPal.png" alt="PayPal" class="m-0 mx-[20px] w-auto h-[20px] opacity-70 hover:opacity-100 cursor-pointer">
 </div>
 
-<p class="mt-[4em] mb-[4em] text-center text-[14px]"">&copy; 2024 Naltlan Dealer Inc. All rights reserved.</p>
+<p class="mt-[4em] mb-[4em] text-center text-[14px]">&copy; 2024 Naltlan Dealer Inc. All rights reserved.</p>
 
 
 </body>
