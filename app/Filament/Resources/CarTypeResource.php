@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\MahasiswaResource\Pages;
-use App\Filament\Resources\MahasiswaResource\RelationManagers;
-use App\Models\Mahasiswa;
+use App\Filament\Resources\CarTypeResource\Pages;
+use App\Filament\Resources\CarTypeResource\RelationManagers;
+use App\Models\CarType;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class MahasiswaResource extends Resource
+class CarTypeResource extends Resource
 {
-    protected static ?string $model = Mahasiswa::class;
+    protected static ?string $model = CarType::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -24,10 +24,8 @@ class MahasiswaResource extends Resource
         return $form
             ->schema([
                 //
-                Forms\Components\TextInput::make('nim'),
-                Forms\Components\TextInput::make('name'),
-                Forms\Components\Select::make('jurusan_id')
-                    ->relationship('jurusan', 'name')
+                Forms\Components\TextInput::make('name')
+                    ->label('Car Type')
                     ->required(),
             ]);
     }
@@ -37,15 +35,13 @@ class MahasiswaResource extends Resource
         return $table
             ->columns([
                 //
-                Tables\Columns\TextColumn::make('nim')->sortable(),
-                Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('jurusan.name')->searchable()->sortable(),
-
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Car Type')
+                    ->searchable()
+                    ->sortable(),
             ])
             ->filters([
                 //
-                Tables\Filters\SelectFilter::make('jurusan_id')
-                ->relationship('jurusan', 'name'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -67,9 +63,9 @@ class MahasiswaResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMahasiswas::route('/'),
-            'create' => Pages\CreateMahasiswa::route('/create'),
-            'edit' => Pages\EditMahasiswa::route('/{record}/edit'),
+            'index' => Pages\ListCarTypes::route('/'),
+            'create' => Pages\CreateCarType::route('/create'),
+            'edit' => Pages\EditCarType::route('/{record}/edit'),
         ];
     }
 }
